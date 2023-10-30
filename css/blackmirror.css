@@ -1,0 +1,64 @@
+/**********************************************************/
+/*          Style sheet for Black Mirros web site         */
+/*          author: Antonio Cordero Molina                */
+/*          version: 1.0                                  */
+/*          comments: class project 2023-24               */
+/**********************************************************/
+
+/* cuando quiero usar una tipografía y asegurarme de que se verá corerctamente, 
+suministro también con la página el archivo de la fuente que será .ttf o .otf */
+/* 1.- ahora en el archivo descargado */
+/* 2.- utilizar el nombre de la font-family donde quiera usarlo */
+
+@font-face {        /* esto no es un selector, es un enlace */
+    font-family: textonormal;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: blackmirror;
+    src: url(../font/FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+
+* {box-sizing: border-box;}  /* con maquetación compleja siempre se incluye*/
+
+    body {
+        background-color: #202020;
+        margin:0;  /* para descativar el margen de separación por defecto */
+        padding:0;
+        font-family: textonormal;
+    }   
+
+    #wrapper {
+        background-color: #808080;
+        width:80%;   /* ancho fijado al 80% */
+        margin: auto  /* centrado automático */
+    }
+
+/****************************** HERO SECTION **********************************/
+
+    #hero {
+        background-image: url(../img/black-mirror-serie.jpg);
+        height: 95vh; /*el 100% del alto de la ventana del navegador*/
+        background-size: cover;
+        
+    }
+
+    #hero button {
+        background-color: #808080;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 75vh;
+        margin-left: 45%;   /* Arreglar*/
+    }
+
+/******************************* RESPONSIVE ***********************************/
+
+@media only screen and (width<700px) {
+    #hero {
+        background-image: url(../img/heromobil.webp);
+    }
+}
