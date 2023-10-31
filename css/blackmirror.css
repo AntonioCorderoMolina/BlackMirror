@@ -38,10 +38,11 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
 /****************************** HERO SECTION **********************************/
 
     #hero {
-        background-image: url(../img/black-mirror-serie.jpg);
+        background-image: url(../img/blck-mirror-serie.webp);
         height: 95vh; /*el 100% del alto de la ventana del navegador*/
         background-size: cover;
-        
+        background-position: center;  
+        position: relative;     /** contenedor relativo **/
     }
 
     #hero button {
@@ -51,8 +52,10 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
         padding: 5px 10px;
         border: none;
         border-radius: 10px;
-        margin-top: 75vh;
-        margin-left: 45%;   /* Arreglar*/
+        position: absolute;     /** contenedor absoluto **/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) ;   /* lo translado a la mitad de su tamaño en horizontal y vertical */
     }
 
 /******************************* RESPONSIVE ***********************************/
