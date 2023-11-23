@@ -3,6 +3,7 @@
 /*          author: Antonio Cordero Molina                */
 /*          version: 1.0                                  */
 /*          comments: class project 2023-24               */
+/*                     MOBILE FIRST                       */
 /**********************************************************/
 
 /* cuando quiero usar una tipografía y asegurarme de que se verá corerctamente, 
@@ -23,7 +24,7 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
 * {box-sizing: border-box;}  /* con maquetación compleja siempre se incluye*/
 
     body {
-        background-color: #202020;
+        background-color: #ccc;
         margin:0;  /* para descativar el margen de separación por defecto */
         padding:0;
         font-family: textonormal;
@@ -31,14 +32,14 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
 
     #wrapper {
         background-color: #808080;
-        width:80%;   /* ancho fijado al 80% */
+        width:100%;   /* ancho fijado al 100% porque es MOBILE FIRST */
         margin: auto  /* centrado automático */
     }
 
 /****************************** HERO SECTION **********************************/
 
     #hero {
-        background-image: url(../img/blck-mirror-serie.webp);
+        background-image: url(../img/heromobil.webp);
         height: 95vh; /*el 100% del alto de la ventana del navegador*/
         background-size: cover;
         background-position: center;  
@@ -58,10 +59,56 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
         transform: translate(-50%,-50%) ;   /* lo translado a la mitad de su tamaño en horizontal y vertical */
     }
 
+
+/****************************** INTRO SECTION (GRID-2) ************************/
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.col-2 {
+    padding: 4%;
+}
+
+#introimg {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+/******************************* FOOTER ***************************************/
+
+footer {
+    background-color: black;
+}
+
+.grid-3d {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.col-4 {
+    padding: 4%;
+}
+
 /******************************* RESPONSIVE ***********************************/
 
-@media only screen and (width<700px) {
+@media only screen and (width>650px) {
     #hero {
-        background-image: url(../img/heromobil.webp);
+        background-image: url(../img/black-mirror-serie.jpg);
+    }
+    #wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (width>900px) {
+    .grid-2 {
+        grid-template-columns: 50% 50%;
+    }
+    .grid-3d {
+        display: grid;
+        grid-template-columns: 25% 25% 50%;
     }
 }

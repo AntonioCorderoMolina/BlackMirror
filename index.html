@@ -9,20 +9,60 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"></link>
 </head>
 <body>
+
+    <!--la estructura del layout en scroll-->
+
+    <div id="wrapper"> <!-- contenedor general -->
+
     <nav>Aquí va a ir la barra de navegación principal</nav><!--cuasi obligatoria-->
         
         <section id="hero">
             <button>Who dares?</button>
         </section><!--secciones variables según temática-->
-        
-    <!--la estructura del layout en scroll-->
-    <div id="wrapper"> <!-- contenedor general -->
+
+        <!-- INTRO SECTION-->
+        <section id="intro">
+
+            <!-- aquí se podría poner un título o lo que fuera, independiente de las columnas-->
+
+            <div class="grid-2"> <!-- contenedor del grid de 2-->
+                <div class="col-2">
+                    <p>The series is a product of Netflix Network and its creator and executive producer is Charlie Brooker. The Black Mirror series has two positive qualities not usually found in other series: First, each episode has a hazardous and, albeit realistic, looks at the relationship between human and technology, and second, each episode has completely separate stories and actors, That is, every part of this series can be viewed separately and without any background. Its charm and impact make all parts of this series worth watching.</p>
+
+                    <p>To begin with, Part One critically critiques social ethics and depicts the mad curiosity hidden in cyberspace and social networks, People who are willing to watch anything unethical and politicians who do everything to get or stay in power. You can also watch this fascinating series and share your feedback on the font and overall story with us.</p>
+                </div>
+
+                <div class="col-2">
+                    <img id="introimg" src="./img/intro.png" alt="A few images from differents episodes">
+                </div>
+            </div>
+            
+            <!-- aquí se podría poner algo diferente independiente de las columnas-->
+
+        </section>
 
         <section>otra sección</section>
         <section>otra sección</section>
         <section>otra sección</section>
-        <section>otra sección</section>
-        <footer>Aquí va el footer</footer><!--prácticamente obligatorio-->
+
+        <footer> <!--prácticamente obligatorio-->
+
+            <div class="grid-3d">
+
+                <div class="col-4">
+                    algo
+                </div>
+                <div class="col-4">
+                    algo
+                </div>
+                <div class="col-2">
+                    algo
+                </div>
+
+            </div>
+
+        </footer>
+
     </div>
 </body>
 </html>
