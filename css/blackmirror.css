@@ -21,6 +21,8 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
     src: url(../font/FontsFree-Net-Proxima-Nova-Bold.otf);
 }
 
+/******************************* BASIC LAYOUT *********************************/
+
 * {box-sizing: border-box;}  /* con maquetación compleja siempre se incluye*/
 
     body {
@@ -31,9 +33,13 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
     }   
 
     #wrapper {
-        background-color: #808080;
+        background-color: #b0aeae;
         width:100%;   /* ancho fijado al 100% porque es MOBILE FIRST */
         margin: auto  /* centrado automático */
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
 /****************************** HERO SECTION **********************************/
@@ -48,9 +54,10 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
 
     #hero button {
         background-color: #808080;
-        color: white;
+        color: black;
+        font-size: 1.2em;
         font-weight: bold;
-        padding: 5px 10px;
+        padding: 10px;
         border: none;
         border-radius: 10px;
         position: absolute;     /** contenedor absoluto **/
@@ -59,6 +66,12 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
         transform: translate(-50%,-50%) ;   /* lo translado a la mitad de su tamaño en horizontal y vertical */
     }
 
+    #hero button:hover {
+        background-color: black;
+        color: #808080;
+        border: 2px solid;
+        border-color: white;
+    }
 
 /****************************** INTRO SECTION (GRID-2) ************************/
 
@@ -75,6 +88,33 @@ suministro también con la página el archivo de la fuente que será .ttf o .otf
     width: 80%;
     display: block;
     margin: auto;
+}
+
+/****************************** SESSIONS SECTION (GRID-4) *********************/
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 100%; /*** mobile firts, grid para que se vea en móvil*/
+}
+
+/******************** estilo de la card dentro del grid-4 *********************/
+#sessions {
+    background-color: #fbfbfb;
+}
+
+.card {
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 3px #353535;
+}
+
+.card img {
+    width: 100%;
 }
 
 /******************************* FOOTER ***************************************/
@@ -94,16 +134,19 @@ footer {
 
 /******************************* RESPONSIVE ***********************************/
 
-@media only screen and (width>650px) {
+@media only screen and (width>650px) {             /** para tablet **/
     #hero {
         background-image: url(../img/black-mirror-serie.jpg);
     }
     #wrapper {
         width: 80%;
     }
+    .grid-4 {
+        grid-template-columns: auto auto;
+    }
 }
 
-@media only screen and (width>900px) {
+@media only screen and (width>900px) {          /** para pc **/
     .grid-2 {
         grid-template-columns: 50% 50%;
     }
@@ -111,4 +154,8 @@ footer {
         display: grid;
         grid-template-columns: 25% 25% 50%;
     }
+    .grid-4 {
+        grid-template-columns: auto auto auto auto; 
+    }
 }
+
