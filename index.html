@@ -7,6 +7,12 @@
     <!-- enlazo la tipografía de estilo-->
     <link rel="stylesheet" href="./css/blackmirror.css">
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"></link>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- enlace al archivo de todos los js del website-->
+    <script src="./js/functionsjs.js"></script>
+    <!-- enlace al arrow function -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,7 +20,24 @@
 
     <div id="wrapper"> <!-- contenedor general -->
 
-    <nav>Aquí va a ir la barra de navegación principal</nav><!--cuasi obligatoria-->
+    <nav><!--cuasi obligatoria-->
+
+        <!-- arrow up poscionada en la esquina inferior derecha -->
+        <a href="#"><i class="fa fa-arrow-circle-up"></i></a>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Home</a>
+            <a href="#intro">Intro</a>
+            <a href="#sessions">Sessions</a>
+            <a href="#funfacts">Fun Facts</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <!-- javascript:void(0) desactiva el comportamiento default del vínculo -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+    </nav>
         
         <section id="hero">
             <a href="#intro"><button>Who dares?</button></a>
@@ -43,7 +66,7 @@
         </section>
 
         <section id="sessions">
-            <h1>Sessions</h1>
+            <h1 class="tittle">Sessions</h1>
             <div class="grid-4">
                 <div class="col-4">
                     <!-- vamos a hacer una card interna-->
