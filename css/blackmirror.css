@@ -151,7 +151,7 @@ a .fa-arrow-circle-up {
     margin: auto;
 }
 
-/****************************** SESSIONS SECTION (GRID-4) *********************/
+/****************************** seasons SECTION (GRID-4) *********************/
 
 .grid-4 {
     display: grid;
@@ -159,7 +159,7 @@ a .fa-arrow-circle-up {
 }
 
 /******************** estilo de la card dentro del grid-4 *********************/
-#sessions {
+#seasons {
     background-color: #fbfbfb;
 }
 
@@ -178,10 +178,76 @@ a .fa-arrow-circle-up {
     width: 100%;
 }
 
+/********** estilo del vídeo ************/
+
+#seasons .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+}
+  
+/* Then style the iframe to fit in the container div with full height and width */
+#seasons .responsive-iframe {
+    position: absolute;
+    top: 10%;   /***** baja un 10% (y queda otro 10% abajo) *****/
+    left: 10%;  /***** se mueve un 10% (y queda otro 10% abajo) *****/
+    bottom: 0;
+    right: 0;
+    width: 80%;     /***** en vez de al 100% deja libre un 20% *****/
+    height: 80%;    /***** en vez de al 100% deja libre un 20% *****/
+}
+
+/***************************** PREDICTIONS SECTION ****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#predictions {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 3em 1em;
+}
+
+.accordion {
+  max-width: 80%;
+  text-align: left;
+}
+
+article {
+  border: 1px solid #fff;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: fixed;
+  top: -100vh; left: -100vh;
+
+  & ~ div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  &:checked ~ div {
+    max-height: 200px;
+  }
+}
+
+
 /******************************* FOOTER ***************************************/
 
 footer {
-    background-color: black;
+    border: solid 1px black;
+    background-color: #b0aeae;
 }
 
 .grid-3d {
@@ -193,6 +259,47 @@ footer {
     padding: 4%;
 }
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .fa-facebook {
+    background-color: #3B5998;
+}
+footer .fa-twitter {
+    background-color: #55ACEE;
+}
+
+footer .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+}
+  
+/* Then style the iframe to fit in the container div with full height and width */
+footer .responsive-iframe {
+    position: absolute;
+    top: 10%;   /***** baja un 10% (y queda otro 10% abajo) *****/
+    left: 10%;  /***** se mueve un 10% (y queda otro 10% abajo) *****/
+    bottom: 0;
+    right: 0;
+    width: 80%;     /***** en vez de al 100% deja libre un 20% *****/
+    height: 80%;    /***** en vez de al 100% deja libre un 20% *****/
+}
+
+/******************************************************************************/
 /******************************* RESPONSIVE ***********************************/
 
 @media only screen and (width>650px) {             /** para tablet **/
