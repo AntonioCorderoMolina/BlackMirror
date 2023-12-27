@@ -242,6 +242,84 @@ input[type="radio"] {
   }
 }
 
+/******************************* GALLERY **************************************/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+/******* Efecto Overlay en las imágenes *********/
+
+#gallery .container {
+    position: relative;
+    width: 50%;
+}
+  
+#gallery .image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+  
+#gallery .container:hover .overlay {
+    opacity: 1;
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 /******************************* FOOTER ***************************************/
 
@@ -259,6 +337,10 @@ footer {
     padding: 4%;
 }
 
+footer h3 {
+    margin: 20px;
+}
+
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -274,12 +356,59 @@ footer a {
     text-decoration: none;
 }
 
+/***** RRSS *****/
+
 footer .fa-facebook {
     background-color: #3B5998;
 }
 footer .fa-twitter {
     background-color: #55ACEE;
 }
+
+/****** CRÉDITOS *******/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: black;
+  }
+
+  #myBtn{
+    cursor:pointer;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 footer .container {
     position: relative;
@@ -298,6 +427,22 @@ footer .responsive-iframe {
     width: 80%;     /***** en vez de al 100% deja libre un 20% *****/
     height: 80%;    /***** en vez de al 100% deja libre un 20% *****/
 }
+
+footer a p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    border: hidden;
+}
+
+footer a p:hover {
+    color: red;
+    border-left: 1px solid red;
+    padding-left: 10px;
+    text-decoration: underline;
+    transition: 0.8s;
+}
+
+
 
 /******************************************************************************/
 /******************************* RESPONSIVE ***********************************/

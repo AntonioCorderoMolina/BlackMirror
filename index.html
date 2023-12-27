@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon"></link>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- enlace al archivo de todos los js del website-->
-    <script src="./js/functionsjs.js"></script>
     <!-- enlace al arrow function -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -28,8 +26,8 @@
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Home</a>
             <a href="#intro">Intro</a>
-            <a href="#seasons">seasons</a>
-            <a href="#funfacts">Fun Facts</a>
+            <a href="#seasons">Seasons</a>
+            <a href="#predictions">Predictions</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
             <!-- javascript:void(0) desactiva el comportamiento default del vínculo -->
@@ -153,7 +151,29 @@
 
             </div>
         </section>
-        <section>otra sección</section>
+
+        <section id="gallery">
+            <h3>Gallery</h3>
+            <div class="row">
+                <div class="column">
+                    <div class="container">
+                        <img src="https://fastly.picsum.photos/id/317/600/400.jpg?hmac=SMD1SNLCK-7iv7nQWZdUjM9Fqwqja7oH0CvhqFeLP9I" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text">Texto imagen</div>
+                        </div>
+                    </div>
+                    <img src="https://fastly.picsum.photos/id/360/400/400.jpg?hmac=sDYkXXrqwXxTJvE4PRW4b1Fa5Zb_iN8W-_rnmT6BNiQ">
+                    <img src="https://fastly.picsum.photos/id/28/200/800.jpg?hmac=-cH59BfMBG4Xn7k1H-gQs5sxwDOq70hGsl23YpFY-RM">
+                    <img src="https://fastly.picsum.photos/id/892/500/300.jpg?hmac=VKddj5srJbX2CT0koZKt1VsylJdpsCthgG6_iouCPlw">
+                    <img src="https://fastly.picsum.photos/id/606/800/400.jpg?hmac=CIn2mUMsYcCJm-mXmeHQLp4cKKQP5RunGCeLSO21YXY">
+                </div>
+                <div class="column">
+                    <img src="https://fastly.picsum.photos/id/606/800/400.jpg?hmac=CIn2mUMsYcCJm-mXmeHQLp4cKKQP5RunGCeLSO21YXY">
+                    <img src="https://fastly.picsum.photos/id/210/500/300.jpg?hmac=BXa1dztsGNs0QGbg5NNrkeVClf3Kwi3_wb2IAEcy3Qo">
+                    <img src="https://fastly.picsum.photos/id/536/300/700.jpg?hmac=UIvt0eQ15YNZxVGJ2j8gjPkXiYWJ1hIIhoY6l_BM1iw">
+                    <img src="https://fastly.picsum.photos/id/317/600/400.jpg?hmac=SMD1SNLCK-7iv7nQWZdUjM9Fqwqja7oH0CvhqFeLP9I">
+                </div>
+        </section>
 
         <footer> <!--prácticamente obligatorio-->
 
@@ -167,11 +187,36 @@
                     <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="#" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+
                     <h3>Official Site:</h3>
-                    <a href="https://www.netflix.com/es/title/70264888" target="_blank">Official Site</a>
+                    <a href="https://www.netflix.com/es/title/70264888" target="_blank">
+                        Official Site
+                    </a>
+
+                    <!-- Créditos hechos en una ventana modal (W3Schools) -->
+                    <!-- Trigger/Open The Modal -->
+                    <h3 id="myBtn">Créditos</h3>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus inventore consequuntur, suscipit facilis ea esse labore id ipsa voluptas eum sit eos dolorum perferendis delectus sequi nihil! Consequatur, sint quas.
+                            Quasi nesciunt alias tempore, obcaecati dolor dolorem laborum, ipsa, atque eaque expedita repudiandae impedit. Earum accusamus libero numquam repudiandae repellat sunt illo, amet iusto, reprehenderit necessitatibus quaerat, asperiores impedit alias?
+                            Quibusdam alias id quos quaerat autem, quae eveniet fugit consectetur labore itaque aliquid, tempora libero sequi quas sunt voluptas. Tempore recusandae adipisci accusantium autem unde fugit aliquid incidunt, ex similique.</p>
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="col-4">
-                    Vínculos:
+                    <a href="#"><p>Home</p></a>
+                    <a href="#intro"><p>Introduction</p></a>
+                    <a href="#seasons"><p>Seasons</p></a>
+                    <a href="#predictions"><p>Predictions</p></a>
+                    <a href="#gallery"><p>Gallery</p></a>
                 </div>
                 <div class="col-2">
                     <!-- Google Maps -->
@@ -181,7 +226,10 @@
                 </div>
             </div>
         </footer>
-
     </div>
+
+    <!-- enlace al archivo de todos los js del website-->
+    <script src="./js/functionsjs.js"></script>
+
 </body>
 </html>
